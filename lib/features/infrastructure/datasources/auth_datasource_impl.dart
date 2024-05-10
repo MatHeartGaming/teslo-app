@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:teslo_shop/config/constants/environment.dart';
-import 'package:teslo_shop/features/auth/domain/domain.dart';
-import 'package:teslo_shop/features/auth/infrastructure/infrstructure.dart';
+import 'package:teslo_shop/features/domain/domain.dart';
+import 'package:teslo_shop/features/infrastructure/infrstructure.dart';
 
 class AuthDatasourceImpl implements AuthDatasource {
   final _dio = Dio(
@@ -28,7 +28,7 @@ class AuthDatasourceImpl implements AuthDatasource {
         throw CustomError(
             e.response?.data['message'] ?? 'Credenciales incorrectas');
       }
-      ;
+      
       if (e.type == DioExceptionType.connectionTimeout) {
         throw ConnectionTimeout();
       }

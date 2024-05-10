@@ -1,6 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:teslo_shop/features/auth/domain/domain.dart';
-import 'package:teslo_shop/features/auth/infrastructure/infrstructure.dart';
+import 'package:teslo_shop/features/domain/domain.dart';
+import 'package:teslo_shop/features/infrastructure/infrstructure.dart';
 
 final authProvider = StateNotifierProvider<AuthNotifier, AuthState>((ref) {
   final authRepository = AuthRepositoryImpl();
@@ -45,7 +45,7 @@ class AuthNotifier extends StateNotifier<AuthState> {
     // TODO: neceistamos guardar el token en el dispositivo
     state = state.copyWith(
       user: user,
-      //errorMessage: '',
+      errorMessage: '',
       authStatus: AuthStatus.authenticated,
     );
   }

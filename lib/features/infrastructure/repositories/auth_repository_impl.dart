@@ -1,5 +1,5 @@
-import 'package:teslo_shop/features/auth/domain/domain.dart';
-import 'package:teslo_shop/features/auth/infrastructure/infrstructure.dart';
+import 'package:teslo_shop/features/domain/domain.dart';
+import 'package:teslo_shop/features/infrastructure/infrstructure.dart';
 
 class AuthRepositoryImpl implements AuthRepository {
   final AuthDatasource _db;
