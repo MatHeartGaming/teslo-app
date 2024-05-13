@@ -28,7 +28,7 @@ class ProductsDatasourceImpl extends ProductsDatasource {
   Future<List<Product>> getProductsByPage(
       {int limit = 10, int offset = 0}) async {
     final response =
-        await _dio.get<List>('/api/products?limit=$limit&offset=$offset');
+        await _dio.get<List>('/products?limit=$limit&offset=$offset');
     final List<Product> products = [];
     for (var product in response.data ?? []) {
       products.add(ProductMapper.jsonToEntity(product));
