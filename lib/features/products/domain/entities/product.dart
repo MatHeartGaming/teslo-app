@@ -27,4 +27,18 @@ class Product {
     required this.user,
   });
 
+  Product.empty({
+    this.id = 'new',
+    this.title = '',
+    this.price = 0.0,
+    this.description = '',
+    this.slug = '',
+    this.stock = 0,
+    this.sizes = const [],
+    this.gender = 'man',
+    this.tags = const [],
+    this.images = const [],
+    this.user,
+  });
+
 }
